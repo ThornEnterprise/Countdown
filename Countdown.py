@@ -16,10 +16,7 @@ def generate_number():
     random_number = random.randint(1, 1000)
     return random_number
 
-if __name__ == "__main__":
-    timer_length = int(input("Enter the length of the timer in seconds: "))
-    print("Starting the random number generator with built-in timer and salt...")
-
+def countdown(timer_length):
     # Display progress bar
     for _ in tqdm(range(timer_length), desc="Running timer"):
         time.sleep(1)
@@ -27,3 +24,10 @@ if __name__ == "__main__":
     random_number = generate_number()
     print(f"Generated number: {random_number}")
     print("Stopping the random number generator...")
+
+if __name__ == "__main__":
+    timer_length = int(input("Enter the length of the timer in seconds: "))
+    print("Starting the random number generator with built-in timer and salt...")
+    countdown(timer_length)
+
+
